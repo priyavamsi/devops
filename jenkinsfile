@@ -6,12 +6,12 @@ pipeline{
     stages {
         stage('Checkout Code') {
            steps {
-              checkout([$class: 'GitSCM', branches: [[name: 'main']], userRemoteConfigs: [[url: 'https://github.com/priyavamsi/jenkinscicd']]])
+              checkout([$class: 'GitSCM', branches: [[name: 'main']], userRemoteConfigs: [[url: 'https://github.com/priyavamsi/devops.git']]])
            }
         }
         stage('SCM') {
            steps {
-              git branch: 'main', credentialsId: 'success', url: 'https://github.com/priyavamsi/jenkinscicd'
+              git branch: 'main', credentialsId: 'success', url: 'https://github.com/priyavamsi/devops.git'
             }
         }
         stage('Maven Build') {

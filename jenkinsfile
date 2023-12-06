@@ -11,7 +11,7 @@ pipeline{
         }
         stage('SCM') {
            steps {
-              git branch: 'main', credentialsId: 'success', url: 'https://github.com/priyavamsi/devops.git'
+             git branch: 'punith', credentialsId: 'pipeline', url: 'https://github.com/priyavamsi/devops.git'
             }
         }
         stage('Maven Build') {
